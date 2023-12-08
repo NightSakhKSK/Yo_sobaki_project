@@ -7,16 +7,12 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @Composable
@@ -33,12 +29,12 @@ fun HamsterScreen(navController: NavController) {
                 .alpha(0.7F)
         )
         Button(
-            modifier = Modifier,
+            modifier = Modifier.align(Alignment.BottomCenter),
             onClick = { navController.navigate("greeting/message=YourMessage&from=YourName") }) {
             Text("Back to the First Screen")
         }
         Button(onClick =  {clickCount.intValue++} ) {
-            Text("Click me: {$clickCount.value} times")
+            Text("Click me: ${clickCount.intValue} times")
         }
     }
 }

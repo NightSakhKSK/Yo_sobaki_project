@@ -64,9 +64,9 @@ fun BirthdayCardPreview() {
     GreetingCardTheme {
         val navController = rememberNavController()
 //        AppNavigation()
-        GreetingScreen(message = stringResource(id = R.string.yo_sobaki1),
-            from = stringResource(id = R.string.from_ksk),
-            navController = navController);
-//        HamsterScreen(navController)
+//        GreetingScreen(message = stringResource(id = R.string.yo_sobaki1),
+//            from = stringResource(id = R.string.from_ksk),
+//            navController = navController);
+        HamsterScreen(navController)
     }
 }
